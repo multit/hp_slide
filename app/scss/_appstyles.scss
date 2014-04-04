@@ -1,0 +1,67 @@
+/* all app scss styles here */
+
+@import "bourbon";
+
+$red: #FF0051;
+$olive: #4B490B;
+$verdemil: #757449;
+$giallo: #EBE54D;
+$salvia: #E2DF9A;
+
+
+.sezioni {
+	width:100%;
+	height: 100%;
+}
+
+#sez1 { background-color:$olive; }
+#sez2 { background-color:$verdemil; }
+#sez3 { background-color:$giallo; }
+#sez4 { background-color:$red; }
+#sez5 { background-color:$salvia; }
+
+div#background  {
+	position:fixed;
+	top:0px;
+	left:0px;
+	background:#333333 url(../images/afbackground01.jpg) center center no-repeat;
+ 	
+	width:100%;
+	height:100%;
+ z-index: -2;
+}
+#intro {
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
+div.entra {
+	position:fixed;
+	left:50%;
+	bottom:5%;
+	height:40px;
+	width:40px;
+	display:block;
+}
+div#entrasimbolo {
+	position:relative;
+	font-size:30px;
+	width:30px;
+	cursor:pointer;
+	height:30px;
+	display:block;
+	@include animation (bounce .5s ease infinite alternate);		
+		i {
+		color:#FFF;
+		opacity:.7;
+			&:hover {
+				opacity:1;
+			}
+	}
+		
+}
+@-webkit-keyframes bounce { 
+	0%   {top:20px;}
+	100%  {top:1px;}
+}
